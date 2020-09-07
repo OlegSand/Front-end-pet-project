@@ -1,0 +1,44 @@
+@import "reset";
+@import "variables";
+
+body >*{
+  background: grey;
+  font: 14px/18px sans-serif;
+  color: #ffffff;
+}
+img {
+  width: 100px;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  // display: flex;
+  // overflow: hidden;
+  &>*{
+    display: flex;
+  }
+}
+span {
+
+}
+#featured {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.featured_card {
+  width: 30%;
+  position: relative;
+  &:first-child {
+    width: 66%;
+    border: 3px solid red;
+  }
+  &:nth-child(2), &:nth-child(3) {
+    width: 30%;
+    border: 3px solid black;
+  }
+  & span {
+    position: absolute;
+  }
+  
+}
