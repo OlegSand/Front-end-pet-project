@@ -4,7 +4,8 @@
 body >*{
   background: grey;
   font: 14px/18px sans-serif;
-  color: #ffffff;
+  // color: #ffffff;
+  color: black;
 }
 img {
   width: 100px;
@@ -26,19 +27,23 @@ span {
   flex-direction: column;
 }
 
-.featured_card {
-  width: 30%;
-  position: relative;
-  &:first-child {
-    width: 66%;
-    border: 3px solid red;
+// .featured_card {
+//   width: 30%;
+//   position: relative;
+//   &:first-child {
+//     width: 66%;
+//     border: 3px solid red;
+//   }
+//   &:nth-child(2), &:nth-child(3) {
+//     width: 30%;
+//     border: 3px solid black;
+//   }
+//   & span {
+//     position: absolute;
+//   }
+// }
+.last_card {
+  &:hover {
+    background: red;
   }
-  &:nth-child(2), &:nth-child(3) {
-    width: 30%;
-    border: 3px solid black;
-  }
-  & span {
-    position: absolute;
-  }
-  
 }
