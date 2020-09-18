@@ -1,0 +1,17 @@
+
+
+@media (max-width: 925px) {
+    .wrapper {
+        width: fit-content;
+    }
+    .arrow {
+        display: none;
+    }
+    #last {
+        width: 100%;
+        justify-content: center;
+    }
+    .banner {
+        display: none;
+    }
+}

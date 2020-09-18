@@ -1,0 +1,211 @@
+body {
+    background: rgba(0,0,0, .2);
+    font: 14px/18px, arial;
+  }
+
+  div {
+    display: flex;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.786em;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    & > * {
+      display: flex;
+      font-family: arial;
+    }
+  }
+  
+  .wrapp-content {
+    width: 52.5em;
+    position: relative;
+  }
+  
+  .wrapper_featured {
+    flex-direction: column;
+  }
+    
+  .section-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 32px;
+    color: $tagsTextColorLast;
+  }
+  
+  #featured:empty {
+    display: none;
+  }
+  
+  #featured {
+    display: flex;
+    height: 32.14rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .card {
+    height: $smallCardsHeight;
+    position: relative;
+    & .card-name {
+      margin: 10px 0 5px 0;
+      color: $cardNameTextColorLast;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 18px;
+    }
+    & .card-tags {
+      font-size: 12px;
+      margin: 5px 0 10px 0;
+      color: $tagsTextColorLast;
+    }
+  }
+
+  .star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .added_to_favorites {
+    width: 30%;
+    position: relative;
+    display: none;
+    &:first-child {
+      display: flex;
+      height: inherit;
+      margin-right: $marginElem;
+      width: 550px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      display: flex;
+      width: $smallCardsWith;
+      &::after {
+        content: '';
+        height: 45%;
+        width: 100%;
+        background: linear-gradient(to top, #000(12%), #ffffff);
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    &:nth-child(3) {
+      margin-top: $marginElem;
+    }
+    & .star {
+        fill: rgba(0,0,0,0);
+        background: url(../icons/star-solid.svg);
+    }
+    & span {
+      position: absolute;
+      color: $whiteText;
+      z-index: 5;
+    }
+    & .card-name {
+        bottom: 30px;
+    }
+    & .card-tags {
+        bottom: 10px;
+    }
+    & .card-name, .card-tags {
+        color: $whiteText;
+        left: 20px;
+    }
+    &::after {
+        content: '';
+        height: 15%;
+        width: 100%;
+        background: linear-gradient(to top, #000000(12%), $whiteText);
+        position: absolute;
+        bottom: 0;
+    }
+  }
+  
+  
+  // LAST section START
+  
+  .wrapped_last {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  
+  .last-banner_wrapp {
+    justify-content: space-between;
+  }
+  
+  #last {
+    display: flex;
+    width: 66%;
+    margin-right: $marginElem;
+    & .card {
+      display: none;
+      
+      &:first-child {
+        display: flex;
+        margin-right: $marginElem;
+        width: $smallCardsWith;
+      }
+      &:nth-child(2) {
+        display: flex;
+        width: $smallCardsWith;
+      }
+      &:first-child, &:nth-child(2) {
+        height: 302px;
+        display: flex;
+        flex-direction: column;
+        img {
+          height: 70%;
+        }
+      }
+      & span {
+        display: inline-flex;
+      }
+      .card-tags {
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .banner {
+    width: $smallCardsWith;
+    height: 350px;
+    background: rgba(0,0,0, .2);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow {
+      height: 100px;
+      width: 40px;
+      fill: $arrowStaticColor;
+      position: absolute;
+      top: 29%;
+      cursor: pointer;
+      transition: 1s ease;
+      &:hover {
+          fill: $arrowActiveColor;
+          background: $arrowActiveBg;
+      }
+  }
+
+  .arrow-next {
+      right: 0;
+  }
+  .arrow-back {
+      left: 0;
+  }
+  

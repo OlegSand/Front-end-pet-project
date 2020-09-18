@@ -50,3 +50,4 @@ exports.compress = compress;
 exports.serve = serve;
 exports.watcher = watcher;
 exports.default = parallel(watcher, serve);
+
